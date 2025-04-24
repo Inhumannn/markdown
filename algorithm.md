@@ -1,96 +1,165 @@
-# Algorithme
+# 🧠 Algorithme
 
-### Sommaire
+## 📌 Sommaire
 
-- [Etapes](#Etapes)
-- [Composition](#composition)
-- [Variable](#variable)
-- [Constante](#constante)
-- [Types](#Types)
-
----
-
-## Etapes d'un algorithme
-
-1. Préparation au traitement des données
-2. Traitement du problème pas à pas en décomposant
-3. Edition du résultat
+- [🚦 Étapes d’un algorithme](#-étapes-dun-algorithme)
+- [🧬 Structure de base](#-structure-de-base)
+- [📦 Variables](#-variables)
+- [🔒 Constantes](#-constantes)
+- [📊 Types de données](#-types-de-données)
+- [🏷️ Règles de nommage](#-règles-de-nommage)
+- [🌍 Portée d’une variable](#-portée-dune-variable)
+- [✔️ Bonnes pratiques](#-bonnes-pratiques)
+- [📥 Lecture et écriture de données](#-lecture-et-écriture-de-données)
+- [🔎 Analyse d’un problème](#-analyse-dun-problème)
+- [🧪 Exemple d'énoncé](#-exemple-dénoncé)
 
 ---
 
-## Composition d'un algorithme
+## 🚦 Étapes d’un algorithme
 
-```
+1. **Préparer les données**
+2. **Décomposer le traitement**
+3. **Afficher ou retourner le résultat**
+
+---
+
+## 🧬 Structure de base
+
+```pseudo
 ALGORITHME NomAlgorithme
-{commentaire de l'algorithme}
+// Description rapide ici
 DEBUT
-  ACTION -> afficher("Hello word!")
+  afficher("Hello world!")
 FIN
 ```
 
 ---
 
-## Déclaration d'une variable :
+## 📦 Variables
 
-```
-- VARIABLE <nom de la variable> : type de la variable
-```
+> Une variable, c’est une petite boîte mémoire temporaire pour stocker des infos 🔁
 
-La Variable permet de réserver de l'espace mémoire pour stocker des données
+### 🔹 Déclaration simple
 
-#### Déclaration de plusieurs variable de même type :
-
-```
-- VARIABLE nombreUn, nombreDeux : entier
+```pseudo
+VARIABLE nomDeVariable : Type
 ```
 
-#### Déclaration de plusieurs variable de type différents :
+### 🔹 Plusieurs variables du même type
 
-```
-- VARIABLE nombreUn, nombreDeux : entier
-           nom, prenom : chaîne de caractères
-```
-
----
-
-## Déclaration d'une constante :
-
-Les variables qui ne cangent jamais de valeurs sont appelées CONSTANTE
-Il est possible de déclarer ce type de données en écrivant :
-
-```
-- CONSTANTE <nom de la constante> : type de la constante
+```pseudo
+VARIABLE age, taille : entier
 ```
 
-```
-- CONSTANTE max : entier <- 10
-            maxFoisDeux : entier <- max * 2
+### 🔹 Types variés
+
+```pseudo
+VARIABLE age, taille : entier
+         nom, prenom : chaîne de caractères
 ```
 
 ---
 
-## Types de données
+## 🔒 Constantes
 
-4 types de données :
+> Les constantes sont des valeurs **figées**. Tu les déclares une fois, elles bougent plus 💎
 
-- **Entier** : données numériques positive ou négative
-- **Réel** : nombres à virgules
-- **Booléen** : Vrai ou faux
-- **Chaîne de caractères** : Données alphanumériques
+```pseudo
+CONSTANTE nomConstante : Type <- valeur
+```
+
+### Exemple :
+
+```pseudo
+CONSTANTE max : entier <- 10
+          maxFoisDeux : entier <- max * 2
+```
+
+---
+
+## 📊 Types de données
+
+| Type                     | Description                          |
+| ------------------------ | ------------------------------------ |
+| **Entier**               | Nombres sans virgule                 |
+| **Réel**                 | Nombres avec virgule                 |
+| **Booléen**              | `VRAI` ou `FAUX`                     |
+| **Chaîne de caractères** | Textes (lettres, chiffres, symboles) |
 
 ---
 
-## Règles de nommage
+## 🏷️ Règles de nommage
 
-Règles à respecter pour le nommage des variables :
+Un bon nom, c’est la base d’un code clean ✨
 
-1. Commencer par une lettre ou un underscore
-2. Peut contenir des chiffres, lettres, underscores, pas de tirets ou points
-3. pas de mots clés (pour, tant que, etc.)
-4. Sensible à la casse : maVar != mavar
-5. Si plusieurs mots : majuscule sur la première lettre de chaque mot sauf premier
-6. Le nom doit décrire la variable
-7. Prononçable
-8. Aussi court que possible, mais aussi long que nécessaire
+1. Commence par une **lettre** ou un **underscore**
+2. Pas de tiret `-`, ni de point `.`
+3. Pas de mots-clés (`pour`, `tant que`, etc.)
+4. **Sensible à la casse** → `maVar` ≠ `mavar`
+5. Utilise le **camelCase** pour plusieurs mots (`maSuperVariable`)
+6. Nom clair = code compréhensible
+7. **Facile à lire & prononcer**
+8. **Court mais expressif**
 
 ---
+
+## 🌍 Portée d’une variable
+
+> La **portée** (_scope_) d'une variable définit où tu peux l’utiliser dans ton code.
+
+- Si elle est déclarée **dans un bloc**, elle n'existe que là.
+- Si elle est **globale**, elle peut être utilisée partout.
+- Toujours donner des noms explicites 🙌
+
+---
+
+## ✔️ Bonnes pratiques
+
+![Bonnes pratiques](img/bp.png)
+
+---
+
+## 📥 Lecture et écriture de données
+
+### 🔹 Lecture (saisie utilisateur)
+
+```pseudo
+saisir(nomDeLaDonnée)
+```
+
+### 🔹 Écriture (affichage)
+
+```pseudo
+afficher(nomDeLaDonnée)
+```
+
+### 🔹 Exemple
+
+```pseudo
+saisir(unNombre)
+afficher("Le nombre est :", unNombre)
+```
+
+---
+
+## 🔎 Analyse d’un problème
+
+L’analyse, c’est le moment où tu **décryptes l’énoncé** comme un détective 🔍
+
+Repère et surligne :
+
+- ✅ Le **but** du programme (le traitement à réaliser)
+- 📥 Les **données d’entrée**
+- 📤 Les **résultats attendus**
+
+---
+
+## 🧪 Exemple d’énoncé
+
+> On souhaite calculer et afficher, à partir d’un **prix hors taxe saisi**, la **TVA** ainsi que le **prix TTC**.
+
+### Le montant TTC dépend de :
+
+- 💸 Le **prix HT**
+- 📈 Le **taux de TVA** (ici, 20%)
