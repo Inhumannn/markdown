@@ -163,3 +163,5 @@ Repère et surligne :
 
 - 💸 Le **prix HT**
 - 📈 Le **taux de TVA** (ici, 20%)
+
+---

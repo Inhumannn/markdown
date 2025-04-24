@@ -1,6 +1,7 @@
-# 📝 Markdown - Le Guide Ultra Clean
+# 📝 Markdown - Apprentissage
 
 ## 📌 Sommaire
+
 - [🏷️ Titres](#-titres)
 - [🖋️ Mise en forme du texte](#-mise-en-forme-du-texte)
 - [🧭 Sommaire cliquable](#-sommaire-cliquable)
@@ -20,13 +21,15 @@
 
 ```markdown
 # Titre niveau 1
+
 ## Titre niveau 2
+
 ### Titre niveau 3
+
 #### Titre niveau 4
+
 ##### Titre niveau 5
 ```
-
-> Utilise les `#` pour hiérarchiser tes sections (max 6 niveaux)
 
 ---
 
@@ -42,8 +45,6 @@ _Italique_
 ---
 
 ## 🧭 Sommaire cliquable
-
-Crée un sommaire interactif avec des liens internes :
 
 ```markdown
 - [Introduction](#introduction)
@@ -79,8 +80,6 @@ Crée un sommaire interactif avec des liens internes :
 - [x] Fait 💪
 ```
 
-> Super utile pour suivre ta to-do ou ton avancement dans un projet !
-
 ---
 
 ## 💬 Citations
@@ -90,8 +89,6 @@ Crée un sommaire interactif avec des liens internes :
 > sur plusieurs lignes.
 ```
 
-> Utilise `>` pour attirer l’attention ou montrer une référence 💡
-
 ---
 
 ## ➖ Séparateurs
@@ -100,20 +97,19 @@ Crée un sommaire interactif avec des liens internes :
 ---
 ```
 
-> Parfait pour séparer des sections ✂️
-
 ---
 
 ## 💻 Bloc de code
 
-```markdown
+````markdown
 ```js
 // Code JavaScript
 console.log("Hello Markdown");
 ```
-```
+````
 
-> Tu peux changer le langage (`js`, `python`, `html`, etc.) pour la coloration syntaxique 🌈
+````
+
 
 ---
 
@@ -121,7 +117,7 @@ console.log("Hello Markdown");
 
 ```markdown
 [Texte cliquable](https://adresse.com)
-```
+````
 
 ---
 
@@ -131,19 +127,15 @@ console.log("Hello Markdown");
 ![Texte alternatif](https://via.placeholder.com/150)
 ```
 
-> Le texte alternatif est affiché si l’image ne se charge pas — ou lu par les lecteurs d’écran 🎧
-
 ---
 
 ## 📊 Tableaux
 
 ```markdown
 | Gauche | Centre | Droite |
-|--------|:------:|-------:|
-| a      | b      | c      |
+| ------ | :----: | -----: |
+| a      |   b    |      c |
 ```
-
-> Astuce : `:------:` pour centrer, `-------:` pour aligner à droite.
 
 ---
 
@@ -152,7 +144,5 @@ console.log("Hello Markdown");
 ```markdown
 [//]: # "Ceci est un commentaire invisible en preview"
 ```
-
-> Super pratique pour laisser des notes sans les afficher 🕵️
 
 ---
