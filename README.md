@@ -101,15 +101,10 @@ _Italique_
 
 ## 💻 Bloc de code
 
-````markdown
 ```js
 // Code JavaScript
 console.log("Hello Markdown");
 ```
-````
-
-````
-
 
 ---
 
@@ -117,7 +112,7 @@ console.log("Hello Markdown");
 
 ```markdown
 [Texte cliquable](https://adresse.com)
-````
+```
 
 ---
 
