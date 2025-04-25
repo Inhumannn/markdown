@@ -27,22 +27,23 @@ END
 
 ## 🔎 Step-by-step reasoning
 
+```
 BEGIN
-THRESHOLD = 13.25
-valA = 0.56
-valB = valA = 0.56
-valA = 0.56 _ (10.5 + 13.25) = 0.56 _ 23.75 = 13.3
-counter = 1
-counter = 1 + 10 = 11
-word = "Hello"
-goodbye = "Goodbye!"
-END
+  THRESHOLD = 13.25
+  valA = 0.56
+  valB = valA = 0.56
+  valA = 0.56 _ (10.5 + 13.25) = 0.56 _ 23.75 = 13.3
+  counter = 1
+  counter = 1 + 10 = 11
+  word = "Hello"
+  goodbye = "Goodbye!"
+EN
 
-````
+```
 
 ---
 
-## 🔢  Even numbers from 0 to 100
+## 🔢 Even numbers from 0 to 100
 
 ```pseudo
 ALGORITHM evenNumbers
@@ -55,7 +56,7 @@ BEGIN
     print(number)
   END FOR
 END
-````
+```
 
 ---
 
