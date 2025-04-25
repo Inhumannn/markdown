@@ -1,120 +1,174 @@
-# 🧠 Algorithme⁺
+# 🧠 Algorithm⁺
 
-## 📌 Sommaire
+## 📌 Table of Contents
 
-- [🧩 Les conditions](#-les-conditions)
-- [✅ Exemple de condition simple](#-exemple-de-condition-simple)
-- [🔄 Sélection à choix multiples](#-selection-à-choix-multiples)
-- [🔁 La boucle POUR (for)](#-la-boucle-pour-for)
-
----
-
-## 🧩 Les conditions
-
-Les structures conditionnelles permettent de prendre des décisions dans un programme.  
-Voici les deux formes principales :
-
-- `SI ... ALORS ... FIN SI`
-- `SI ... ALORS ... SINON ... FIN SI`
+- [🧩 Conditions](#-conditions)
+- [✅ Simple IF Example](#-simple-if-example)
+- [🔄 Multiple Choice Conditions](#-multiple-choice-conditions)
+- [🔁 The FOR Loop](#-the-for-loop)
+- [🔁 The WHILE Loop](#-the-while-loop)
+- [🔄 FOR vs WHILE](#-for-vs-while)
 
 ---
 
-### ✅ Exemple de condition simple
+## 🧩 Conditions
+
+Conditional structures let your program **make decisions**.
+
+Main forms:
+- `IF ... THEN ... END IF`
+- `IF ... THEN ... ELSE ... END IF`
+
+---
+
+### ✅ Simple IF Example
 
 ```pseudo
-ALGORITHME conditionSimple
-// Cet algorithme demande une valeur entière et affiche son double si elle est inférieure à un seuil
+ALGORITHM simpleCondition
+// Asks for an integer and displays its double if it's below a threshold
 
-CONSTANTE seuil : entier <- 10
+CONSTANT threshold : integer <- 10
+VARIABLE val : integer
 
-VARIABLE val : entier
+BEGIN
+  print("Enter an integer number")
+  input(val)
 
-DEBUT
-  afficher("Entrez un nombre entier")
-  saisir(val)
-
-  SI val < seuil ALORS
-    afficher("Voici son double : ", val * 2)
-  SINON
-    afficher("Voici la valeur de base : ", val)
-  FIN SI
-FIN
+  IF val < threshold THEN
+    print("Here is its double: ", val * 2)
+  ELSE
+    print("Original value: ", val)
+  END IF
+END
 ```
 
 ---
 
-## 🔄 Sélection à choix multiples
+## 🔄 Multiple Choice Conditions
 
-Voici deux approches pour gérer des choix multiples dans un programme :
+Two ways to handle multiple cases:
 
-### 📜 Première méthode : `SELON`
+### 📜 1. Using `SWITCH`
 
 ```pseudo
-ALGORITHME afficheGenre
-// Affiche un texte en fonction du genre d'une personne
+ALGORITHM displayGender
+// Displays a title depending on gender
 
-VARIABLE genre : chaîne
+VARIABLE gender : string
 
-DEBUT
-  SELON genre
-    "M" : afficher("Monsieur")
-    "Mme" : afficher("Madame")
-    "Mlle" : afficher("Mademoiselle")
-    "autre" : afficher("Non genré")
-  FIN SELON
-FIN
+BEGIN
+  SWITCH gender
+    CASE "M" :
+      print("Mister")
+    CASE "Mme" :
+      print("Madam")
+    CASE "Mlle" :
+      print("Miss")
+    CASE "other" :
+      print("Non-binary")
+  END SWITCH
+END
 ```
 
-### 📜 Deuxième méthode : `SI ... SINON SI ... SINON`
+### 📜 2. Using `IF ... ELSE IF ... ELSE`
 
 ```pseudo
-ALGORITHME afficheGenre
-// Affiche un texte en fonction du genre d'une personne
+ALGORITHM displayGender
+// Displays a title depending on gender
 
-VARIABLE genre : chaîne
+VARIABLE gender : string
 
-DEBUT
-  SI genre = "M" ALORS
-    afficher("Monsieur")
-  SINON SI genre = "Mme" ALORS
-    afficher("Madame")
-  SINON SI genre = "Mlle" ALORS
-    afficher("Mademoiselle")
-  SINON
-    afficher("Non genré")
-  FIN SI
-FIN
+BEGIN
+  IF gender = "M" THEN
+    print("Mister")
+  ELSE IF gender = "Mme" THEN
+    print("Madam")
+  ELSE IF gender = "Mlle" THEN
+    print("Miss")
+  ELSE
+    print("Non-binary")
+  END IF
+END
 ```
 
 ---
 
-## 🔁 La boucle POUR (for)
+## 🔁 The FOR Loop
 
-La boucle **POUR** est utilisée lorsque vous avez besoin de répéter une action plusieurs fois, avec un nombre d'itérations connu à l'avance. Elle permet d'éviter l'utilisation répétée de conditions `SI` et de simplifier le code.
-
-### Exemple de la boucle POUR
+Used when the number of repetitions is **known** in advance.
 
 ```pseudo
-ALGORITHME faitLeTotal
-// Effectue la somme des valeurs saisies
+ALGORITHM sumValues
+// Calculates the sum of input values
 
-VARIABLE nbVal, count : entiers
-          valeur, totalValeurs : réels
+VARIABLE nbVal, count : integers
+         value, total : reals
 
-DEBUT
-  afficher("Combien de valeurs voulez-vous saisir ?")
-  saisir(nbVal)
+BEGIN
+  print("How many values do you want to enter?")
+  input(nbVal)
 
-  totalValeurs <- 0
+  total <- 0
 
-  POUR count <- 1 À nbVal FAIRE
-    afficher("Donnez une valeur : ")
-    saisir(valeur)
-    totalValeurs <- totalValeurs + valeur
-  FIN POUR
+  FOR count <- 1 TO nbVal DO
+    print("Enter a value:")
+    input(value)
+    total <- total + value
+  END FOR
 
-  afficher("Le total des ", nbVal, " valeurs est : ", totalValeurs)
-FIN
+  print("The total of ", nbVal, " values is: ", total)
+END
 ```
 
-> **Résumé** : La boucle **POUR** permet de répéter un bloc d'instructions un nombre déterminé de fois, ce qui est utile lorsque le nombre d'itérations est connu à l'avance. Elle remplace efficacement une série de conditions `SI` et simplifie le programme.
+> ✅ **Tip:** Use `FOR` when you know how many times you’ll repeat a task.
+
+---
+
+## 🔁 The WHILE Loop
+
+Use `WHILE` when the number of iterations is **unknown** — it runs **while a condition is true**.
+
+```pseudo
+ALGORITHM displayEvenNumbers
+// Displays even numbers up to 100
+
+VARIABLE count : integer
+
+BEGIN
+  count <- 0
+
+  WHILE count <= 100 DO
+    print("Even number: ", count)
+    count <- count + 2
+  END WHILE
+END
+```
+
+> ✅ **Pro tip:** Everything you can do with a `FOR`, you can do with a `WHILE`. But not always the other way around 😎
+
+---
+
+## 🔄 FOR vs WHILE
+
+| Feature        | **FOR**                           | **WHILE**                          |
+|----------------|-----------------------------------|------------------------------------|
+| Usage          | Known number of loops             | Unknown number of loops            |
+| Initialization | Built-in                          | Manual setup                       |
+| Update         | Built-in                          | Manual (you write the increment)   |
+| Condition check| Part of loop                      | Must be written separately         |
+
+---
+
+## 🧠 When to use FOR or WHILE?
+
+| Situation                              | Use...     |
+|----------------------------------------|------------|
+| Iterating through a list/array         | 👉 `FOR`    |
+| Fixed number of repetitions            | 👉 `FOR`    |
+| Waiting for a specific event to happen | 👉 `WHILE`  |
+
+---
+
+🎉 Boom! You now have a clean and sharp **English-style algorithm course** ready to rock in any dev context.  
+
+Tu veux une version `.pdf`, une traduction vers Python ou un petit quizz pour tester tout ça ? Tell me and we go 💥

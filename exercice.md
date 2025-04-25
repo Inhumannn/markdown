@@ -1,102 +1,141 @@
-# 📘 Exercice
+# 📘 Exercise
 
-## 🧾 Code de l'algorithme
+## 🧾 Algorithm Code
 
 ```pseudo
-ALGORITHME maSequence
-// Instructions séquentielles simples
+ALGORITHM mySequence
+// Simple sequential instructions
 
-CONSTANTE SEUIL : réel <- 13.25
+CONSTANT THRESHOLD : real <- 13.25
 
-VARIABLE valA, valB : réel
-         compteur   : entier
-         mot, tom   : chaîne
+VARIABLE valA, valB : real
+         counter     : integer
+         word, goodbye : string
 
-DEBUT
+BEGIN
   valA <- 0.56
   valB <- valA
-  valA <- valA * (10.5 + SEUIL)
-  compteur <- 1
-  compteur <- compteur + 10
-  mot <- "Bonjour"
-  tom <- "Au revoir!"
-FIN
+  valA <- valA * (10.5 + THRESHOLD)
+  counter <- 1
+  counter <- counter + 10
+  word <- "Hello"
+  goodbye <- "Goodbye!"
+END
 ```
 
 ---
 
-## 🔎 Raisonnement étape par étape
+## 🔎 Step-by-step reasoning
+
+BEGIN
+THRESHOLD = 13.25
+valA = 0.56
+valB = valA = 0.56
+valA = 0.56 _ (10.5 + 13.25) = 0.56 _ 23.75 = 13.3
+counter = 1
+counter = 1 + 10 = 11
+word = "Hello"
+goodbye = "Goodbye!"
+END
+
+````
+
+---
+
+## 🔢  Even numbers from 0 to 100
 
 ```pseudo
-DEBUT
-  SEUIL = 13.25
-  valA = 0.56
-  valB = valA = 0.56
-  valA = 0.56 * (10.5 + 13.25) = 0.56 * 23.75 = 13.3
-  compteur = 1
-  compteur = 1 + 10 = 11
-  mot = "Bonjour"
-  tom = "Au revoir!"
-FIN
+ALGORITHM evenNumbers
+// Display even numbers from 0 to 100
+
+VARIABLE number : integer
+
+BEGIN
+  FOR number <- 0 TO 100 STEP 2 DO
+    print(number)
+  END FOR
+END
+````
+
+---
+
+## 🧩 Guessing game with FOR loop
+
+```pseudo
+ALGORITHM guessTheNumber
+// Game where the user must guess the secret number
+
+CONSTANT secretNumber : integer <- 52
+
+VARIABLE playerGuess, i : integer
+         hasWon : boolean
+
+BEGIN
+  hasWon <- FALSE
+
+  FOR i <- 1 TO 10 DO
+    IF hasWon = FALSE THEN
+      print("What is the secret number between 1 and 100?")
+      print("Attempt number: ", i, "/10")
+      input(playerGuess)
+
+      IF playerGuess = secretNumber THEN
+        print("You win in ", i, " tries!")
+        hasWon <- TRUE
+      ELSE IF playerGuess < secretNumber THEN
+        print("It's higher! You have ", 10 - i, " tries left.")
+      ELSE
+        print("It's lower! You have ", 10 - i, " tries left.")
+      END IF
+    END IF
+  END FOR
+
+  IF hasWon = FALSE THEN
+    print("Game over! The secret number was ", secretNumber)
+  END IF
+END
 ```
 
 ---
 
-## 🔢 Nombres pairs de 0 jusqu'à 100
+## 🧩 Guessing game with WHILE loop
 
 ```pseudo
-ALGORITHME nombrePair
-// Affiche les nombres pairs de 0 jusqu'à 100
+ALGORITHM guessTheNumber
+// Game where the user must guess the secret number
 
-VARIABLE number : réel <- 0
+CONSTANT secretNumber : integer <- 52
 
-DEBUT
-  POUR number À 100 PAR PAS DE 2 FAIRE
-    afficher(number)
-  FIN POUR
-FIN
+VARIABLE playerGuess, i, maxTries : integer
+         hasWon : boolean
+
+BEGIN
+  hasWon <- FALSE
+  i <- 1
+  maxTries <- 10
+
+  WHILE i <= maxTries AND hasWon = FALSE DO
+    print("What is the secret number between 1 and 100?")
+    print("Attempt number: ", i, "/10")
+    input(playerGuess)
+
+    IF playerGuess = secretNumber THEN
+      print("You win in ", i, " tries!")
+      hasWon <- TRUE
+    ELSE IF playerGuess < secretNumber THEN
+      print("It's higher! You have ", 10 - i, " tries left.")
+    ELSE
+      print("It's lower! You have ", 10 - i, " tries left.")
+    END IF
+
+    i <- i + 1
+  END WHILE
+
+  IF hasWon = FALSE THEN
+    print("Game over! The secret number was ", secretNumber)
+  END IF
+END
+
 ```
 
 ---
-
-## 🧩 Devinette
-
-```pseudo
-ALGORITHME devineLeNombre
-{Jeu où l'utilisateur doit deviner un nombre secret}
-
-CONSTANTE nombreSecret : entier <- 52
-
-VARIABLE nombreJoueur, i : entier
-         isVictoire : booléen
-
-DEBUT
-    isVictoire <- false
-
-    POUR i <- 1 À 10 PAR PAS DE 1 FAIRE
-
-        SI isVictoire = false ALORS
-            afficher("Quel est le nombre secret de 1 à 100 ?")
-            afficher("Nombre de tentatives : ", i, "/10")
-            saisir(nombreJoueur)
-
-            SI nombreJoueur = nombreSecret ALORS
-                afficher("C'est gagné en ", i, " tentatives !")
-                isVictoire <- true
-            FIN SI
-
-            SI nombreJoueur < nombreSecret ALORS
-                afficher("C'est plus grand, attention il vous reste ", 10 - i, " essais")
-            FIN SI
-
-            SI nombreJoueur > nombreSecret ALORS
-                afficher("C'est plus petit, attention il vous reste ", 10 - i, " essais")
-            FIN SI
-        FIN SI
-    FIN POUR
-
-    SI isVictoire = false ALORS
-        afficher("Perdu, le nombre secret était ", nombreSecret)
-    FIN SI
-FIN
-```

@@ -1,167 +1,167 @@
-# 🧠 Algorithme
+# 🧠 Algorithm
 
-## 📌 Sommaire
+## 📌 Summary
 
-- [🚦 Étapes d’un algorithme](#-étapes-dun-algorithme)
-- [🧬 Structure de base](#-structure-de-base)
+- [🚦 Steps of an Algorithm](#-steps-of-an-algorithm)
+- [🧬 Basic Structure](#-basic-structure)
 - [📦 Variables](#-variables)
-- [🔒 Constantes](#-constantes)
-- [📊 Types de données](#-types-de-données)
-- [🏷️ Règles de nommage](#-règles-de-nommage)
-- [🌍 Portée d’une variable](#-portée-dune-variable)
-- [✔️ Bonnes pratiques](#-bonnes-pratiques)
-- [📥 Lecture et écriture de données](#-lecture-et-écriture-de-données)
-- [🔎 Analyse d’un problème](#-analyse-dun-problème)
-- [🧪 Exemple d'énoncé](#-exemple-dénoncé)
+- [🔒 Constants](#-constants)
+- [📊 Data Types](#-data-types)
+- [🏷️ Naming Rules](#-naming-rules)
+- [🌍 Variable Scope](#-variable-scope)
+- [✔️ Best Practices](#-best-practices)
+- [📥 Input and Output](#-input-and-output)
+- [🔎 Problem Analysis](#-problem-analysis)
+- [🧪 Example Statement](#-example-statement)
 
 ---
 
-## 🚦 Étapes d’un algorithme
+## 🚦 Steps of an Algorithm
 
-1. **Préparer les données**
-2. **Décomposer le traitement**
-3. **Afficher ou retourner le résultat**
+1. Prepare the data
+2. Break down the logic
+3. Display or return the result
 
 ---
 
-## 🧬 Structure de base
+## 🧬 Basic Structure
 
 ```pseudo
-ALGORITHME NomAlgorithme
-// Description rapide ici
-DEBUT
-  afficher("Hello world!")
-FIN
+ALGORITHM MyAlgorithm
+// Short description here
+BEGIN
+  print("Hello world!")
+END
 ```
 
 ---
 
 ## 📦 Variables
 
-> Une variable, c’est une petite boîte mémoire temporaire pour stocker des infos 🔁
+> A variable is a little memory box that stores info 🔁
 
-### 🔹 Déclaration simple
+### 🔹 Simple declaration
 
 ```pseudo
-VARIABLE nomDeVariable : Type
+VARIABLE variableName : Type
 ```
 
-### 🔹 Plusieurs variables du même type
+### 🔹 Multiple of same type
 
 ```pseudo
-VARIABLE age, taille : entier
+VARIABLE age, height : integer
 ```
 
-### 🔹 Types variés
+### 🔹 Mixed types
 
 ```pseudo
-VARIABLE age, taille : entier
-         nom, prenom : chaîne de caractères
-```
-
----
-
-## 🔒 Constantes
-
-> Les constantes sont des valeurs **figées**. Tu les déclares une fois, elles bougent plus 💎
-
-```pseudo
-CONSTANTE nomConstante : Type <- valeur
-```
-
-### Exemple :
-
-```pseudo
-CONSTANTE max : entier <- 10
-          maxFoisDeux : entier <- max * 2
+VARIABLE age, height : integer
+         name, surname : string
 ```
 
 ---
 
-## 📊 Types de données
+## 🔒 Constants
 
-| Type                     | Description                          |
-| ------------------------ | ------------------------------------ |
-| **Entier**               | Nombres sans virgule                 |
-| **Réel**                 | Nombres avec virgule                 |
-| **Booléen**              | `VRAI` ou `FAUX`                     |
-| **Chaîne de caractères** | Textes (lettres, chiffres, symboles) |
-
----
-
-## 🏷️ Règles de nommage
-
-Un bon nom, c’est la base d’un code clean ✨
-
-1. Commence par une **lettre** ou un **underscore**
-2. Pas de tiret `-`, ni de point `.`
-3. Pas de mots-clés (`pour`, `tant que`, etc.)
-4. **Sensible à la casse** → `maVar` ≠ `mavar`
-5. Utilise le **camelCase** pour plusieurs mots (`maSuperVariable`)
-6. Nom clair = code compréhensible
-7. **Facile à lire & prononcer**
-8. **Court mais expressif**
-
----
-
-## 🌍 Portée d’une variable
-
-> La **portée** (_scope_) d'une variable définit où tu peux l’utiliser dans ton code.
-
-- Si elle est déclarée **dans un bloc**, elle n'existe que là.
-- Si elle est **globale**, elle peut être utilisée partout.
-- Toujours donner des noms explicites 🙌
-
----
-
-## ✔️ Bonnes pratiques
-
-![Bonnes pratiques](img/bp.png)
-
----
-
-## 📥 Lecture et écriture de données
-
-### 🔹 Lecture (saisie utilisateur)
+> Constants are **fixed values**. You declare them once, they don't change 💎
 
 ```pseudo
-saisir(nomDeLaDonnée)
+CONSTANT constantName : Type <- value
 ```
 
-### 🔹 Écriture (affichage)
+### Example :
 
 ```pseudo
-afficher(nomDeLaDonnée)
-```
-
-### 🔹 Exemple
-
-```pseudo
-saisir(unNombre)
-afficher("Le nombre est :", unNombre)
+CONSTANT max : integer <- 10
+         maxTimesTwo : integer <- max * 2
 ```
 
 ---
 
-## 🔎 Analyse d’un problème
+## 📊 Data Types
 
-L’analyse, c’est le moment où tu **décryptes l’énoncé** comme un détective 🔍
+| Type    | Description                |
+| ------- | -------------------------- |
+| Integer | Whole numbers              |
+| Real    | Numbers with decimals      |
+| Boolean | TRUE or FALSE              |
+| String  | Text (letters, symbols...) |
 
-Repère et surligne :
+---
 
-- ✅ Le **but** du programme (le traitement à réaliser)
-- 📥 Les **données d’entrée**
-- 📤 Les **résultats attendus**
+## 🏷️ Naming Rules
+
+1. Start with a **letter** or **underscore**
+2. No dash `-`, no dot `.`
+3. Avoid keywords (`for`, `while`, etc.)
+4. **Case-sensitive** → `myVar` ≠ `myvar`
+5. Use **camelCase** for clarity (`mySuperVariable`)
+6. Clear name = understandable code
+7. **Easy to read & pronounce**
+8. **Short but expressive**
 
 ---
 
-## 🧪 Exemple d’énoncé
+## 🌍 Variable Scope
 
-> On souhaite calculer et afficher, à partir d’un **prix hors taxe saisi**, la **TVA** ainsi que le **prix TTC**.
+> The **scope** defines where a variable can be used in your code.
 
-### Le montant TTC dépend de :
-
-- 💸 Le **prix HT**
-- 📈 Le **taux de TVA** (ici, 20%)
+- Declared **inside a block** → usable only there
+- Declared **globally** → usable anywhere
+- Always use meaningful names 🙌
 
 ---
+
+## ✔️ Best Practices
+
+✅ Comment your code  
+✅ Choose meaningful variable names  
+✅ Avoid redundancy  
+✅ Test often and early  
+✅ Keep it readable and structured
+
+---
+
+## 📥 Input and Output
+
+### 🔹 Input (user entry)
+
+```pseudo
+input(dataName)
+```
+
+### 🔹 Output (display)
+
+```pseudo
+print(dataName)
+```
+
+### 🔹 Example
+
+```pseudo
+input(aNumber)
+print("The number is:", aNumber)
+```
+
+---
+
+## 🔎 Problem Analysis
+
+> Analyzing = reading between the lines like a detective 🔍
+
+Highlight and note:
+
+- ✅ The **goal** (what to do)
+- 📥 The **inputs**
+- 📤 The **expected outputs**
+
+---
+
+## 🧪 Example Statement
+
+> We want to calculate and display the **VAT** and the **final price (TTC)** from a given **pre-tax price**.
+
+### Final price depends on:
+
+- 💸 Pre-tax price (HT)
+- 📈 VAT rate (20%)

@@ -1,97 +1,97 @@
-# 📝 Markdown - Apprentissage
+# 📝 Markdown - Learning Guide
 
-## 📌 Sommaire
+## 📌 Summary
 
-- [🏷️ Titres](#-titres)
-- [🖋️ Mise en forme du texte](#-mise-en-forme-du-texte)
-- [🧭 Sommaire cliquable](#-sommaire-cliquable)
-- [📚 Listes](#-listes)
-- [✅ Listes de tâches](#-listes-de-tâches)
-- [💬 Citations](#-citations)
-- [➖ Séparateurs](#-séparateurs)
-- [💻 Bloc de code](#-bloc-de-code)
-- [🔗 Liens](#-liens)
+- [🏷️ Titles](#-titles)
+- [🖋️ Text Formatting](#-text-formatting)
+- [🧭 Clickable Table of Contents](#-clickable-table-of-contents)
+- [📚 Lists](#-lists)
+- [✅ Task Lists](#-task-lists)
+- [💬 Quotes](#-quotes)
+- [➖ Dividers](#-dividers)
+- [💻 Code Blocks](#-code-blocks)
+- [🔗 Links](#-links)
 - [🖼️ Images](#-images)
-- [📊 Tableaux](#-tableaux)
-- [🙈 Commentaires](#-commentaires)
+- [📊 Tables](#-tables)
+- [🙈 Comments](#-comments)
 
 ---
 
-## 🏷️ Titres
+## 🏷️ Titles
 
 ```markdown
-# Titre niveau 1
+# Title level 1
 
-## Titre niveau 2
+## Title level 2
 
-### Titre niveau 3
+### Title level 3
 
-#### Titre niveau 4
+#### Title level 4
 
-##### Titre niveau 5
+##### Title level 5
 ```
 
 ---
 
-## 🖋️ Mise en forme du texte
+## 🖋️ Text Formatting
 
 ```markdown
-_Italique_  
-**Gras**  
-~~Barré~~  
-`Texte en code inline`
+_Italic_  
+**Bold**  
+~~Strikethrough~~  
+`Inline code`
 ```
 
 ---
 
-## 🧭 Sommaire cliquable
+## 🧭 Clickable Table of Contents
 
 ```markdown
 - [Introduction](#introduction)
-- [Méthode](#méthode)
+- [Method](#method)
 - [Conclusion](#conclusion)
 ```
 
 ---
 
-## 📚 Listes
+## 📚 Lists
 
-### 🔹 Liste à puces
+### 🔹 Bulleted List
 
 ```markdown
 - Item 1
 - Item 2
-  - Sous-item
+  - Sub-item
 ```
 
-### 🔸 Liste numérotée
+### 🔸 Numbered List
 
 ```markdown
-1. Étape 1
-2. Étape 2
+1. Step 1
+2. Step 2
 ```
 
 ---
 
-## ✅ Listes de tâches
+## ✅ Task Lists
 
 ```markdown
-- [ ] À faire
-- [x] Fait 💪
+- [ ] To do
+- [x] Done 💪
 ```
 
 ---
 
-## 💬 Citations
+## 💬 Quotes
 
 ```markdown
-> Ceci est une citation  
-> sur plusieurs lignes.
+> This is a quote  
+> over multiple lines.
 ```
 
 ---
 
-## ➖ Séparateurs
+## ➖ Dividers
 
 ```markdown
 ---
@@ -99,19 +99,19 @@ _Italique_
 
 ---
 
-## 💻 Bloc de code
+## 💻 Code Block
 
 ```js
-// Code JavaScript
+// JavaScript Code
 console.log("Hello Markdown");
 ```
 
 ---
 
-## 🔗 Liens
+## 🔗 Links
 
 ```markdown
-[Texte cliquable](https://adresse.com)
+[Clickable text](https://example.com)
 ```
 
 ---
@@ -119,25 +119,25 @@ console.log("Hello Markdown");
 ## 🖼️ Images
 
 ```markdown
-![Texte alternatif](https://via.placeholder.com/150)
+![Alt text](https://via.placeholder.com/150)
 ```
 
 ---
 
-## 📊 Tableaux
+## 📊 Tables
 
 ```markdown
-| Gauche | Centre | Droite |
-| ------ | :----: | -----: |
-| a      |   b    |      c |
+| Left | Center | Right |
+| ---- | :----: | ----: |
+| a    |   b    |     c |
 ```
 
 ---
 
-## 🙈 Commentaires
+## 🙈 Comments
 
 ```markdown
-[//]: # "Ceci est un commentaire invisible en preview"
+[//]: # "This is a hidden comment in preview"
 ```
 
 ---
