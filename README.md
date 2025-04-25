@@ -1,22 +1,5 @@
 # 📝 Markdown - Learning Guide
 
-## 📌 Summary
-
-- [🏷️ Titles](#-titles)
-- [🖋️ Text Formatting](#-text-formatting)
-- [🧭 Clickable Table of Contents](#-clickable-table-of-contents)
-- [📚 Lists](#-lists)
-- [✅ Task Lists](#-task-lists)
-- [💬 Quotes](#-quotes)
-- [➖ Dividers](#-dividers)
-- [💻 Code Blocks](#-code-blocks)
-- [🔗 Links](#-links)
-- [🖼️ Images](#-images)
-- [📊 Tables](#-tables)
-- [🙈 Comments](#-comments)
-
----
-
 ## 🏷️ Titles
 
 ```markdown

@@ -139,3 +139,113 @@ END
 ```
 
 ---
+
+## stop at 500
+
+```
+ALGOTIHME stop
+{Algorithme stop at 500 }
+
+VARIABLE userValue, storage: integer
+
+CONSTANTE maxTries: integer
+
+maxTries <- 500
+storage <- 0
+
+BEGIN
+  REPEAT
+    PRINT("value : ")
+    INPUT(userValue)
+    storage =+ userValue
+  WHILE userValue <= maxTries
+    PRINT(storage)
+END
+```
+
+---
+
+## Procédure
+
+```speudo
+ALGORITHME main
+{Utilise la procédure pour afficher une  table de multiplication}
+
+PROCEDURE afficheMultiplication(nombre: entier)
+
+VARIABLE i: entier
+
+DEBUT
+i <- 1
+  while i <= 10
+    result <- i * nbSaisiParUtilisateur
+    print(i, "*" nbSaisiParUtilisateur, "=" result)
+    i++
+  END WHILE
+FIN
+
+VARIABLES nbSaisiParUtilisateur: entier
+
+DEBUT
+  print("nombre de la table de multiplication")
+  input(nbSaisiParUtilisateur)
+  afficheMultiplication(3)
+  afficheMultiplication(6)
+  afficheMultiplication()
+FIN
+```
+
+## Double procédure
+
+```speudo
+ALGORITHME main
+{Utilise la procédure pour afficher une somme et le produit}
+
+PROCEDURE afficheSomme(number1, number2: entier)
+
+VARIABLE resultSomme: entier
+
+DEBUT
+  resultSomme = number1 + number2
+  if < 0
+    print("négatif")
+  END IF
+  if > 0
+    print("positif")
+  END IF
+  if = 0
+    print("positif")
+  END IF
+FIN
+
+-------------------------
+
+PROCEDURE afficheProduit(number1, number2: entier)
+
+VARIABLE resultProduit: entier
+
+DEBUT
+  resultProduit = number1 * number2
+  if < 0
+    print("négatif")
+  END IF
+  if > 0
+    print("positif")
+  END IF
+  if = 0
+    print("positif")
+  END IF
+FIN
+
+----------------
+
+VARIABLES
+
+DEBUT
+  print("Merci de renseiller le premier nombre")
+  input(number1)
+  input(number2)
+  afficheSomme(2, 4)
+  afficheProduit(2, 4)
+FIN
+```
